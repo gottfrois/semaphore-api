@@ -205,4 +205,4 @@ I'm vastly more likely to merge code that comes with tests. If you're confused b
 
 ## Thanks
 
-Thanks to [Githubot](https://github.com/iangreenleaf/githubot) author for his amazing work that could get me started.
+Thanks to the author of [Githubot](https://github.com/iangreenleaf/githubot) for his amazing work that could get me started.
