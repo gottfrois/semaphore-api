@@ -1,0 +1,28 @@
+{
+  "author": "Pierre-Louis Gottfrois <pierrelouis.gottfrois@gmail.com>",
+  "name": "semaphore-api",
+  "description": "Hubot-compatible Semaphore API wrapper for Node.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/gottfrois/semaphore-api",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gottfrois/semaphore-api.git"
+  },
+  "main": "./lib/semaphore-api",
+  "scripts": {
+    "prepublish": "coffee -o lib -c src && cat .gitignore | grep -v '^lib$' > .npmignore",
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "dependencies": {
+    "scoped-http-client": ">= 0.9.8",
+    "async": "0.2.x"
+  },
+  "devDependencies": {
+    "mocha": "~2.2",
+    "coffee-script": "~1.9.1",
+    "nock": "~0.28.3"
+  }
+}
