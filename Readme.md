@@ -10,14 +10,14 @@ npm install semaphore-api
 
 Use it in your Hubot scripts:
 
-```js
+```coffeescript
 module.exports = (robot)->
   semaphore = require('semaphore-api')(robot)
 ```
 
 Or use it on its own:
 
-```js
+```coffeescript
 semaphore = require('semaphore-api')
 ```
 
@@ -27,7 +27,7 @@ You can pass additional options to the constructor if needed.
 
 Make any call to the Semaphore API, get the parsed JSON response:
 
-```js
+```coffeescript
 semaphore.get "projects", (projects)->
   console.log projects[0].name
 
@@ -51,7 +51,7 @@ export HUBOT_SEMAPHORE_AUTH_TOKEN=xxxx...
 
 Used with Hubot, errors are automatically sent to Hubot logger. If you would like to catch errors as well, define your own callback:
 
-```js
+```coffeescript
 semaphore.handleErrors (response)->
   console.log "Oh no! #{response.statusCode}!"
 ```
@@ -71,19 +71,18 @@ Options may be passed in three ways, in increasing order of precedence:
 1. Through shell env variables
 2. Through the constructor:
 
-```js
-semaphore = require('semaphore-api')(robot, authToken: 'xxx')
-```
-
+   ```coffeescript
+   semaphore = require('semaphore-api')(robot, authToken: 'xxx')
+   ```
 3. Using `withOptions`, which lets you pass options to only some requests:
 
-```js
-semaphore = require('semaphore-api')(robot)
-other_provider = semaphore.withOptions(authToken: 'xxxx')
+   ```coffeescript
+   semaphore = require('semaphore-api')(robot)
+   other_provider = semaphore.withOptions(authToken: 'xxxx')
 
-semaphore.get "projects", -> # ...
-other_provider.get "projects", -> # ...
-```
+   semaphore.get "projects", -> # ...
+   other_provider.get "projects", -> # ...
+   ```
 
 ### Available options
 
@@ -98,7 +97,7 @@ Because life is too short.
 
 ### Projects
 
-```js
+```coffeescript
 # get all projects
 semaphore.projects (projects)->
   console.log projects[0].name
@@ -106,7 +105,7 @@ semaphore.projects (projects)->
 
 ### Branches
 
-```js
+```coffeescript
 # get all branches of given project
 semaphore.branches ':project_id', (branches)->
   console.log branches[0].name
@@ -126,7 +125,7 @@ semaphore.branches(':project_id').history ':branch_id', { page: 2 }, (response)-
 
 ### Builds
 
-```js
+```coffeescript
 # get build info of given project and branch
 semaphore.builds(':project_id').info ':branch_id', ':build_id', (response)->
   console.log response
@@ -154,7 +153,7 @@ semaphore.builds(':project_id').deploy ':branch_id', ':build_id', ':server_id', 
 
 ### Servers
 
-```js
+```coffeescript
 # get all servers of given project
 semaphore.servers ':project_id', (servers)->
   console.log servers[0].name
@@ -174,7 +173,7 @@ semaphore.servers(':project_id').history ':server_id', { page: 2 }, (response)->
 
 ### Deploys
 
-```js
+```coffeescript
 # get info of given deploy
 semaphore.deploys(':project_id', ':server_id').info ':deploy_id', (response)->
   console.log response
