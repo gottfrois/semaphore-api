@@ -92,6 +92,10 @@ other_provider.get "projects", -> # ...
 * `concurrentRequests` / `HUBOT_CONCURRENT_REQUESTS` -- limits the allowed number of concurrent requests to the semaphore API. Default to 20.
 * `errorHandler` -- function for custom error handling logic.
 
+## Built-in methods
+
+Because life is too short.
+
 ### Projects
 
 ```js
