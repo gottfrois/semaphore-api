@@ -18,4 +18,4 @@ module.exports = (project, cb)->
     @post "projects/#{project}/#{branch}/builds/#{build}/stop", {}, cb
 
   deploy: (branch, build, server, cb)=>
-    @post "project/#{project}/#{branch}/builds/#{build}/deploy/#{server}", {}, cb
+    @post "projects/#{project}/#{branch}/builds/#{build}/deploy/#{server}", {}, cb
