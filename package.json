@@ -2,7 +2,7 @@
   "author": "Pierre-Louis Gottfrois <pierrelouis.gottfrois@gmail.com>",
   "name": "semaphore-api",
   "description": "Hubot-compatible Semaphore API wrapper for Node.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/gottfrois/semaphore-api",
   "repository": {
     "type": "git",
